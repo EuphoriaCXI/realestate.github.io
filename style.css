@@ -1,11 +1,13 @@
 :root {
   --Bright-Blue: hsl(208.4, 100%, 51.2%);
-  --Medium-Blue: hsl(219, 16.1%, 48.6%);
   --Light-Blue: hsl(206.7, 81.8%, 97.8%);
+  --Medium-Blue: hsl(219, 16.1%, 48.6%);
+  --Heavy-Medium-Blue: hsl(226.7, 61%, 23.1%);
   --Dark-Blue: hsl(226.7, 10.2%, 34.5%);
   --Very-Dark-Blue: hsl(237, 100%, 7.8%);
   --Header-Color: hsl(216, 100%, 95.1%);
   --Light-Black: hsl(0, 0%, 26.7%);
+  --CTA-Color: hsl(219.4, 91.2%, 26.9%);
 }
 
 /* ======
@@ -520,16 +522,16 @@ HOUSES ON DISPLAY
 BENEFITS
 ====== */
 .benefits-wrapper {
-  display: flex;
   position: relative;
   max-width: 1440px;
-  padding: 5.375rem 10.312rem 15rem;
+  padding: 5.375rem 10.312rem 5rem;
   margin: 0 auto;
 }
 
 .benefits-text {
+  position: relative;
   margin-top: 4rem;
-  margin-left: 71%;
+  margin-left: 66%;
 }
 
 .benefits-text h2 {
@@ -540,13 +542,15 @@ BENEFITS
 
 .benefits-text p {
   margin-top: 1.5rem;
-  color: var(--Medium-Blue);
+  max-width: 90%;
   font-weight: 400;
+  line-height: 1.8;
+  color: var(--Medium-Blue);
 }
 
-.benefits-text::before {
+.benefits-wrapper::before {
   content: "";
-  background: url(./images/image-and-card.png);
+  background-image: url(./images/image-and-card.png);
   background-repeat: no-repeat;
   position: absolute;
   top: 0;
@@ -555,4 +559,104 @@ BENEFITS
   bottom: 0;
   max-width: 100%;
   max-height: 100%;
+}
+
+.benefits-text::before {
+  content: "";
+  background: url(./images/Rectangle\ 64.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  max-width: 100%;
+  max-height: 100%;
+  top: -2%;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.card-wrapper {
+  margin-top: 10rem;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 5rem;
+}
+
+.benefits-card h2 {
+  font-size: 3.5rem;
+}
+
+.benefits-card p {
+  color: var(--Medium-Blue);
+}
+
+/* ======
+CALL TO ACTION
+====== */
+.cta-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  position: relative;
+  max-width: 1096px;
+  padding: 5.375rem 4.312rem 5rem;
+  margin: 0 auto;
+  border-radius: 16px;
+  background-color: var(--CTA-Color);
+  color: #fff;
+}
+
+.cta-wrapper h2 {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.cta-wrapper p {
+  font-weight: 200;
+}
+
+.cta-wrapper a {
+  display: inline-block;
+  max-width: 20%;
+  padding: 0.8rem 2rem;
+  margin-top: 1rem;
+  font-size: 0.8125rem;
+  border: none;
+  border-radius: 6px;
+  background-color: #fff;
+  color: var(--CTA-Color);
+}
+
+.cta-wrapper::after {
+  content: "";
+  background: url(./images/illustration.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  max-width: 100%;
+  max-height: 160%;
+  top: -18%;
+  right: 0;
+  left: 50%;
+  bottom: 0;
+}
+
+/* - FOOTER - */
+
+/* ======
+FOOTER
+====== */
+.footer-wrapper {
+  position: relative;
+  max-width: 1440px;
+  padding: 5.375rem 10.312rem 5rem;
+  margin: 0 auto;
+  column-count: 4;
+}
+
+.footer-wrapper ul {
+  padding-left: 0;
+}
+
+.footer-company,
+.footer-contact {
+  margin-left: 4rem;
 }
